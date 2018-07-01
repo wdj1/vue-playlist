@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- 官方文档：  https://cn.vuejs.org/v2/api/#v-for -->
+  <meta charset="utf-8">
+  <title>Vue.js</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h2>v-for 循环遍历</h2>
+    <ul>
+      <li v-for="name in names">
+        {{ name }}
+      </li>
+    </ul>
+
+    <ul>
+      <li v-for="(user, index) in users">
+        {{index+1}}. {{ user.name }} - {{user.age}}
+      </li>
+    </ul>
+
+    <h4>----- 利用 template 渲染多个元素 -----</h3>
+    <ul>
+      <template v-for="user in users">
+        <li>Name - {{ user.name }}</li>
+        <li>Age - {{ user.age }}</li><br>
+      </template>
+    </ul>
+
+    <h4>----- 遍历对象 -----</h4>
+    <template v-for="user in users">
+      <template v-for="(key, val) in user">
+        <p>{{ key }} - {{ val }}
+      </template>
+    </template>
+    
+
+  </div>
+
+<script src="main.js"></script>
+</body>
+</html>

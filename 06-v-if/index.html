@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- 官方文档：  https://cn.vuejs.org/v2/guide/conditional.html -->
+  <meta charset="utf-8">
+  <title>Vue.js</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h2>v-if 条件渲染</h2>
+    <button v-on:click="success = !success">连接成功</button>
+    <button v-on:click="error = !error">连接失败</button>
+    
+    <p v-if="success">连接成功</p>
+    <p v-else-if="error">连接失败</p>
+
+    <div style="margin-top: 50px">
+      <template v-if="loginType === 'username'">
+        <label>用户名</label>
+        <input placeholder="输入你的用户名" key="username-input">
+      </template>
+      <template v-else>
+        <label>邮 箱</label>
+        <input placeholder="输入你的邮箱" key="email-input">
+      </template>
+      <button v-on:click="toggleLoginType">切换登录方式</button>
+    </div>
+
+  </div>
+
+<script src="main.js"></script>
+</body>
+</html>

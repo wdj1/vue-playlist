@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- 官方文档：  https://cn.vuejs.org/v2/guide/class-and-style.html -->
+  <meta charset="utf-8">
+  <title>Vue.js</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h2>动态 CSS Class</h2>
+
+    <h3>示例 1</h3>
+    <div v-on:click="changeColor1 = !changeColor1" v-bind:class="{ changeColor:changeColor1 }">
+      <span>changeColor</span>
+    </div>
+
+    <h3>示例 2</h3>
+    <button v-on:click="changeColor = !changeColor">changeColor</button>
+    <button v-on:click="changeLength = !changeLength">changLength</button>
+    <div v-bind:class=" bindClasses ">
+      <span>change</span>
+    </div>
+  </div>
+
+<script src="main.js"></script>
+</body>
+</html>

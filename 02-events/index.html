@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- 官方文档  https://cn.vuejs.org/v2/guide/events.html -->
+  <meta charset="utf-8">
+  <title>Vue.js</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h2>Events</h2>
+    <button v-on:click.once="add(1)">涨一岁</button>
+    <button @click="subtract(1)">减一岁</button>
+    <button v-on:dblclick="add(10)">涨十岁</button>
+    <button @dblclick="subtract(10)">减十岁</button>
+    <p>My age is {{ age }}.</p>
+
+    <p>
+      <a v-on:click.prevent="alert" href="https://cn.vuejs.org" target="blank">看成人小电影</a>
+    </p>
+    <div id="canvas" v-on:mousemove="updateXY">
+      {{ x }}, {{ y }} - 
+      <span v-on:mousemove.stop>STOP MOVING</span>
+    </div>
+  </div>
+
+<script src="main.js"></script>
+</body>
+</html>

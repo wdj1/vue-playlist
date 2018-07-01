@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- https://github.com/hemiahwu/vueplaylist -->
+  <meta charset="utf-8">
+  <title>Vue.js</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="vue-app">
+    <!-- 使用方法 methods -->
+    <h2>{{ greet('afternoon') }}</h2>
+
+    <!-- 获取数据 data -->
+    <p>Name: {{ name }}</p>
+    <p>Job: {{ job }}</p>
+
+    <!-- 属性绑定 -->
+    <a v-bind:href="link">v-bind</a>
+    <p v-html="linkTag"></p>
+  </div>
+<script src="main.js"></script>
+</body>
+</html>

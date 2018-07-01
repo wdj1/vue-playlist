@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h2>Two Way Binding - input/textarea/select</h1>
+    <p>
+      <label>Name: </label>
+      <input type="text" v-model="name">
+      <span>{{ name }}</span>
+    </p>
+    <p>
+      <label>Age: </label>
+      <!-- 旧的方法 -->
+      <input ref="age" type="text" v-on:keyup="showAge">
+      <span>{{ age }}</span>
+    </p>
+  </div>
+
+<script src="main.js"></script>
+</body>
+</html>
