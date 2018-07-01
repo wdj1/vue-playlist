@@ -11,5 +11,5 @@
 5. class绑定
 6. 条件渲染
 7. 列表渲染
-8. demo
+8. demo --> https://wdj1.github.io/vue-playlist/08-demo/
 9. 组件基础
