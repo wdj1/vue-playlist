@@ -4,12 +4,12 @@
 先通过 CDN 的方式引入和使用 Vue.js  
 
 ---
-1. templateSyntax
-2. events
-3. twoWayBinding
-4. computed
-5. classBinging
-6. v-if
-7. v-for
+1. 模板语法
+2. 事件处理
+3. 双向绑定
+4. 计算属性
+5. class绑定
+6. 条件渲染
+7. 列表渲染
 8. demo
-9. component
+9. 组件基础
